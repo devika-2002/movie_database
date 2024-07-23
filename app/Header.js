@@ -1,15 +1,16 @@
 "use client"
 import React, { useState } from 'react';
 
-function Header() {
+function Header({ setMovies }) {
     const [input, setInput] = useState('');
 
     const handleSearch = () => {
-        const apiKey ='809f0cff';
-        fetch(`https://newsapi.org/v2/everything?q=${input}&apiKey=${apiKey}`)
+        const apiKey = '809f0cff';
+        fetch(`https://www.omdbapi.com/?s=${input}&apikey=${apiKey}`)
         .then(response => response.json())
         .then((data) => {
             console.log(data);
+            setMovies(data.Search);  // Assuming the API returns an array of movies in `data.Search`
         })
         .catch(error => console.error('Error fetching data:', error));
     };

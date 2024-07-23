@@ -36,3 +36,31 @@ Button {
   font-size: 16px;
   padding-top: 6px;
 }
+
+
+.movie-main-row {
+  border: 1px solid black;
+  width: 1000px;
+  height: 250px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.col1 {
+  float: left;
+  border: 1px solid black;
+  height: 250px;
+  width: 300px;
+}
+
+.col2 {
+  float: left;
+  border: 1px solid black;
+  height: 250px;
+  width: 696px;
+}
+
+.movie-image{
+  width: 300px;
+  height: 248px;
+}
